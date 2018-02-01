@@ -17,6 +17,7 @@
   "scripts": {
     "compile": "webpack",
     "start": "node server.js",
+    "pretest": "eslint --ignore-path .gitignore .",
     "test": "jest"
   },
   "repository": {
@@ -31,6 +32,7 @@
   },
   "homepage": "https://github.com/volsci/paper-trader-react#readme",
   "devDependencies": {
+    "eslint": "^4.16.0",
     "jest": "^22.1.4"
   }
 }
