@@ -19,7 +19,7 @@ npm start
 
 Test
 ---
-Paper Trader uses Jest for running unit tests, as well as ESlinter for linting, which runs in the pretest phase as defined in the `package.json`. Continuous integration is handled by Travis CI.
+Paper Trader uses Jest for running unit tests, as well as ESlint for linting, which runs in the pretest phase as defined in the `package.json`. Continuous integration is handled by Travis CI.
 
 ```
 npm test
