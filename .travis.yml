@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - 9.4.0
+sudo: enabled
+install:
+  - npm install
+
+notifications:
+  email: false

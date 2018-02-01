@@ -29,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/volsci/paper-trader-react/issues"
   },
-  "homepage": "https://github.com/volsci/paper-trader-react#readme"
+  "homepage": "https://github.com/volsci/paper-trader-react#readme",
+  "devDependencies": {
+    "jest": "^22.1.4"
+  }
 }
