@@ -1,10 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Layout from './components/layout.jsx';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import MyAwesomeReactComponent from './components/component.jsx';
 
-document.addEventListener('DOMContentLoaded', function() {
-    ReactDOM.render(
-        React.createElement(Layout),
-        document.getElementById('app')
-    );
-});
+const App = () => (
+    <MuiThemeProvider>
+        <MyAwesomeReactComponent />
+    </MuiThemeProvider>
+);
+
+ReactDOM.render(
+    <App />,
+    document.getElementById('app')
+);
