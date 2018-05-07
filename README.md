@@ -5,7 +5,7 @@ Paper trading is the act of simulated trading on the share market. A paper trade
 
 While there are apps that exist to this end already, I've found them to be generally unsatisfying: an afterthought app on real brokerage platforms, rail-roaded games that rarely allow you to invest in any other form than long (if they even follow the real pricepoint of real shares at all), a facade to get email addresses on a mailing list, or restrictive in what markets they involve (US only). 
 
-This is both an exercise to better my React & R skills, as well as build something I personally want to use, all the while adhering to modern web design principles and linting rules for code hygiene.
+This is both an exercise to better my full stack skills, as well as build something I personally want to use, all the while adhering to modern web design principles and linting rules for code hygiene.
 
 *Paper Trader* is developed with React, Express & Node, with a [TBD] stock data library (probably stocks.js). 
 
