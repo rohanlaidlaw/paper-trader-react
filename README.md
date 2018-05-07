@@ -9,7 +9,7 @@ This is both an exercise to better my React & R skills, as well as build somethi
 
 *Paper Trader* is developed with React & Node, using [OpenCPU](https://www.opencpu.org/) to fetch and pass over real time stock data with the R library [quantmod](https://github.com/joshuaulrich/quantmod). 
 
-## Objectives
+### Objectives
 * Create a self-contained app that touches on all elements of full-stack development
 * Get good at React
 * Adhere to linting rules however annoying rather than bypass them
