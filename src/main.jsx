@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import MyAwesomeReactComponent from './components/component.jsx';
+import CardButton from './components/component.jsx';
 
 const App = () => (
     <MuiThemeProvider>
-        <MyAwesomeReactComponent />
+        <CardButton />
     </MuiThemeProvider>
 );
 
