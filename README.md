@@ -7,7 +7,7 @@ While there are apps that exist to this end already, I've found them to be gener
 
 This is both an exercise to better my React & R skills, as well as build something I personally want to use, all the while adhering to modern web design principles and linting rules for code hygiene.
 
-*Paper Trader* is developed with React & Node, using [OpenCPU](https://www.opencpu.org/) to fetch and pass over real time stock data with the R library [quantmod](https://github.com/joshuaulrich/quantmod). 
+*Paper Trader* is developed with React, Express & Node, with a [TBD] stock data library (probably stocks.js). 
 
 ### Objectives
 * Create a self-contained app that touches on all elements of full-stack development
