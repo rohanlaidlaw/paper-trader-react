@@ -25,5 +25,8 @@ module.exports = {
     modules: [
       path.join(__dirname, 'node_modules'),
     ],
+    extensions: [
+      '*', '.webpack.js', '.web.js', '.js', '.json', '.jsx',
+    ],
   },
 };
