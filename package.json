@@ -18,7 +18,7 @@
   "scripts": {
     "compile": "webpack",
     "start": "node server.js",
-    "pretest": "eslint --ignore-path .gitignore .",
+    "pretest": "eslint --ext .jsx --ext .js --ignore-path .gitignore .",
     "test": "jest"
   },
   "repository": {
