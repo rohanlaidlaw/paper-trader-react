@@ -4,16 +4,6 @@ import Card from 'material-ui/Card';
 
 
 class CardButton extends React.Component {
-  static addCard() {
-    return (
-      <Card style={{
-                float: 'left', padding: 8, margin: 16, width: 600,
-            }}
-      >
-        <h2>Data</h2>
-      </Card>);
-  }
-
   constructor(props) {
     super(props);
     this.state = ({
@@ -22,6 +12,16 @@ class CardButton extends React.Component {
 
     this.addCard = this.addCard.bind(this);
     this.addMoreCards = this.addMoreCards.bind(this);
+  }
+
+  addCard() {
+    return (
+      <Card style={{
+                float: 'left', padding: 8, margin: 16, width: 600,
+            }}
+      >
+        <h2>Data</h2>
+      </Card>);
   }
 
   addMoreCards() {
