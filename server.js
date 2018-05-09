@@ -5,8 +5,9 @@ const webpackConfig = require('./webpack.config.js');
 const path = require('path');
 
 const app = express();
-
 const compiler = webpack(webpackConfig);
+
+require('dotenv').config();
 
 app.use(express.static(path.join(__dirname, '/www')));
 

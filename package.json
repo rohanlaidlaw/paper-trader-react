@@ -6,10 +6,12 @@
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "dotenv": "^5.0.1",
     "express": "^4.16.2",
     "material-ui": "^0.20.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "stocks.js": "0.0.17",
     "webpack": "^3.10.0",
     "webpack-dev-middleware": "^2.0.4"
   },
