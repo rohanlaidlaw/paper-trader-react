@@ -1,9 +1,10 @@
 const path = require('path');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   context: path.join(__dirname, './src'),
   entry: [
-    './main.jsx',
+      'babel-polyfill', './main.jsx',
   ],
   output: {
     path: path.join(__dirname, './www'),
@@ -29,4 +30,7 @@ module.exports = {
       '*', '.webpack.js', '.web.js', '.js', '.json', '.jsx',
     ],
   },
+  plugins: [
+    new Dotenv()
+  ],
 };

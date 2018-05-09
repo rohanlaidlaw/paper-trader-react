@@ -4,9 +4,10 @@
   "dependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.0.16",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
-    "dotenv": "^5.0.1",
+    "dotenv-webpack": "^1.5.5",
     "express": "^4.16.2",
     "material-ui": "^0.20.0",
     "react": "^16.2.0",

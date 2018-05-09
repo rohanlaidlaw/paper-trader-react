@@ -1,17 +1,34 @@
 import React from 'react';
 import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
-import NavigationClose from 'material-ui/svg-icons/navigation/close';
+import ContentAdd from 'material-ui/svg-icons/content/add';
+
+const key = process.env.ALVA_API_KEY;
+const stocks = new Stocks(key);
+
+async function request () {
+    const result = await stocks.timeSeries({
+        symbol: 'TSLA',
+        interval: '1min',
+        amount: 10
+    });
+
+    document.body.innerHTML = JSON.stringify(result);
+}
+
+
 
 function handleClick() {
-  alert('blah');
+    request()
 }
+
+
 
 const TitleBar = () => (
   <AppBar
     title="Paper Trader"
     onRightIconButtonClick={handleClick}
-    iconElementRight={<IconButton><NavigationClose /></IconButton>}
+    iconElementRight={<IconButton><ContentAdd /></IconButton>}
   />
 );
 
