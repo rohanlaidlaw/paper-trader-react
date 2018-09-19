@@ -7,8 +7,8 @@ import ContentAdd from 'material-ui/svg-icons/content/add';
 
 import addCard from '../actions/actions';
 
-// const key = process.env.ALVA_API_KEY;
-// const stocks = new Stocks(key);
+// //const key = process.env.ALVA_API_KEY;
+// // const stocks = new Stocks(key);
 
 const AddCard = ({ dispatch }) => {
   // let text
