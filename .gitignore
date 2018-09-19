@@ -1,4 +1,4 @@
 node_modules
 www/bundle.js
-.env
-stocks.js
+/.env
+www/stocks.js
