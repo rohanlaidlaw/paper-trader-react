@@ -1,5 +1,5 @@
 # Paper Trader
-[![Build Status](https://travis-ci.org/volsci/paper-trader-react.svg?branch=master)](https://travis-ci.org/volsci/paper-trader-react)
+[![Build Status](https://travis-ci.org/volsci/paper-trader-react.svg?branch=develop)](https://travis-ci.org/volsci/paper-trader-react)
 [![Coverage Status](https://coveralls.io/repos/github/volsci/paper-trader-react/badge.svg?branch=master)](https://coveralls.io/github/volsci/paper-trader-react?branch=master)
 
 Paper trading is the act of simulated trading on the securities market. A paper trader marks the buy and sell prices for their asset, calculating their gain or loss from the difference. A particularly dedicated paper trader might then perform modifiers and fees over that figure. This allows participating without real money at stake -- whether for education (think the ASX game), practice or academia. Traditionally this is done through Excel formulas or on paper with pen.
