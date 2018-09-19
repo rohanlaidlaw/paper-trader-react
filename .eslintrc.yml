@@ -1,1 +1,5 @@
 extends: airbnb
+rules:
+    import/no-named-as-default: 0
+    no-return-assign: 0
+

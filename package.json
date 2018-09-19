@@ -10,8 +10,12 @@
     "dotenv-webpack": "^1.5.5",
     "express": "^4.16.2",
     "material-ui": "^0.20.0",
+    "prop-types": "^15.6.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0",
     "stocks.js": "0.0.17",
     "webpack": "^3.10.0",
     "webpack-dev-middleware": "^2.0.4"
@@ -42,5 +46,8 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.6.1",
     "jest": "^22.1.4"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }

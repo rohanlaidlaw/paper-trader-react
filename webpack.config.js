@@ -1,10 +1,12 @@
+/* eslint-disable */
+
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   context: path.join(__dirname, './src'),
   entry: [
-      'babel-polyfill', './main.jsx',
+    'babel-polyfill', './main.jsx',
   ],
   output: {
     path: path.join(__dirname, './www'),
@@ -31,6 +33,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new Dotenv()
+    new Dotenv(),
   ],
 };

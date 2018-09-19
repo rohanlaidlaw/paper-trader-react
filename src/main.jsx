@@ -1,20 +1,16 @@
 /* eslint-env browser */
 import React from 'react';
-import ReactDOM from 'react-dom';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import CardButton from './components/cardbutton';
-import TitleBar from './components/titlebar';
+import { render } from 'react-dom';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import App from './components/App';
+import stockCards from './reducers/reducers';
 
+const store = createStore(stockCards);
 
-const App = () => (
-  <MuiThemeProvider>
-    <TitleBar />
-    <CardButton />
-  </MuiThemeProvider>
-);
-
-
-ReactDOM.render(
-  <App />,
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('app'),
 );
