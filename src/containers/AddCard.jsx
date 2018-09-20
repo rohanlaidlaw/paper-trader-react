@@ -4,28 +4,25 @@ import PropTypes from 'prop-types';
 import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
+import Stocks from 'stocks.js';
 
 import addCard from '../actions/actions';
 
-// //const key = process.env.ALVA_API_KEY;
-// // const stocks = new Stocks(key);
+const key = process.env.ALVA_API_KEY;
+const stocks = new Stocks(key);
 
 const AddCard = ({ dispatch }) => {
-  // let text
-
-  // async function request () {
-  //     const result = await stocks.timeSeries({
-  //         symbol: 'TSLA',
-  //         interval: '1min',
-  //         amount: 10
-  //     });
-  //
-  //     text = JSON.stringify(request)
-  //     dispatch(addCard(text))
-  // }
+  async function stockRequest() {
+    const result = await stocks.timeSeries({
+      symbol: 'TSLA',
+      interval: '1min',
+      amount: 10,
+    });
+    dispatch(addCard(JSON.stringify(result)));
+  }
 
   function handleClick() {
-    dispatch(addCard('working!'));
+    stockRequest();
   }
 
   return (
