@@ -4,4 +4,4 @@ rules:
     no-return-assign: 0
 globals:
     Stocks: true
-
+parser: babel-eslint
