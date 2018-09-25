@@ -4,16 +4,16 @@
 
 Paper trading is the act of simulated trading on the securities market. A paper trader marks the buy and sell prices for their asset, calculating their gain or loss from the difference. A particularly dedicated paper trader might then perform modifiers and fees over that figure. This allows participating without real money at stake -- whether for education (think the ASX game), practice or academia. Traditionally this is done through Excel formulas or on paper with pen.
 
-While there are apps that exist to this end already, I remain unsatisfied. Afterthoughts on brokerage platforms, rail-roaded games allowing only longing shares perhaps even with imaginary numbers, or just a facade to build a mailing list.
+While there are apps that exist to this end already, I remain unsatisfied. Afterthoughts on brokerage platforms, rail-roaded games allowing only longing shares perhaps even with imaginary numbers, or just facades to build a mailing list.
 
 This is both an exercise to better myself as a full-stack developer, while building something I personally want to use.
 
 *Paper Trader* is developed with React+Redux with the stocks.js library.
 
 ### Objectives
-* Create a self-contained app that touches on all elements of full-stack development
+* Create a fully-realized web app that touches on all elements of full-stack development
 * Get good at React
-* Adhere to linting rules however annoying rather than bypass them
+* Keep the code to a standard
 
 State
 ---
@@ -41,6 +41,10 @@ Paper Trader uses Jest for running unit tests. Continuous integration is handled
 npm test
 ```
 
-Linting
+Workflow
+---
+Paper Trader uses the Gitflow workflow.
+
+Linter
 ---
 Paper Trader uses ESlint for linting, which runs in the pretest phase as defined in the `package.json`. Airbnb's linting rules are in use, however there are some modifications when the rules interfere with React's best practices.
