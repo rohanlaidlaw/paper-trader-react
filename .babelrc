@@ -1,6 +1,9 @@
 {
   "presets": [
-    ["env", { "modules": false }],
+    ["es2016"],
     "react"
+  ],
+  "plugins": [
+    "babel-plugin-transform-class-properties"
   ]
 }
