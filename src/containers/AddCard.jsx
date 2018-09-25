@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import IconButton from '@material-ui/core/IconButton';
 import Add from '@material-ui/icons/Add';
@@ -15,10 +15,10 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
-// import addCard from '../actions/actions';
+import addCard from '../actions/actions';
 
-// const key = process.env.ALVA_API_KEY;
-// const stocks = new Stocks(key);
+const key = process.env.ALVA_API_KEY;
+const stocks = new Stocks(key);
 
 class AddCard extends React.Component {
     state = {
@@ -26,14 +26,17 @@ class AddCard extends React.Component {
       ticker: '',
     };
 
-  // async function stockRequest() {
-  //   const result = await stocks.timeSeries({
-  //     symbol: 'TSLA',
-  //     interval: '1min',
-  //     amount: 10,
-  //   });
-  //   dispatch(addCard(JSON.stringify(result)));
-  // }
+    handleDone = async () => {
+      const result = await stocks.timeSeries({
+        symbol: this.state.ticker,
+        interval: '1min',
+        amount: 10,
+      });
+
+      this.props.dispatch(addCard(JSON.stringify(result)));
+      this.setState({ dialogOpen: false, ticker: '' });
+    };
+
 
     handleClickOpen = () => {
       this.setState({ dialogOpen: true, ticker: '' });
@@ -48,7 +51,6 @@ class AddCard extends React.Component {
         ticker: e.target.value,
       });
     };
-
 
     render() {
       return (
@@ -91,7 +93,7 @@ class AddCard extends React.Component {
               <Button onClick={this.handleClose} color="primary">
                       Cancel
               </Button>
-              <Button onClick={this.handleClose} color="primary">
+              <Button onClick={this.handleDone} color="primary">
                       Done
               </Button>
             </DialogActions>
@@ -101,8 +103,10 @@ class AddCard extends React.Component {
     }
 }
 
-// AddCard.propTypes = {
-//   dispatch: PropTypes.func.isRequired,
-// };
+
+AddCard.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+};
+
 
 export default connect()(AddCard);
