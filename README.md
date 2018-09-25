@@ -8,7 +8,7 @@ While there are apps that exist to this end already, I remain unsatisfied. After
 
 This is both an exercise to better myself as a full-stack developer, while building something I personally want to use.
 
-*Paper Trader* is developed with React+Redux with the stocks.js library.
+*Paper Trader* is developed with React+Redux using the stocks.js library (which in turn accesses the Alpha Vantage API).
 
 ### Objectives
 * Create a fully-realized web app that touches on all elements of full-stack development
