@@ -15,7 +15,7 @@ This is both an exercise to better myself as a full-stack developer, while build
 * Get good at React
 * Keep the code to a standard
 
-### State
+### Current State
 * Input any number of stocks and have their intraday trading graphed
 
 Setup
