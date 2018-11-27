@@ -16,9 +16,9 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
 import addCard from '../actions/actions';
+import getData from '../utils/stockcharts';
 
 const key = process.env.ALVA_API_KEY;
-const stocks = new Stocks(key);
 
 class AddCard extends React.Component {
     state = {
@@ -27,16 +27,12 @@ class AddCard extends React.Component {
     };
 
     handleDone = async () => {
-      const result = await stocks.timeSeries({
-        symbol: this.state.ticker,
-        interval: '1min',
-        amount: 10,
+      getData(key, this.state.ticker).then((data) => {
+        this.props.dispatch(addCard(data));
       });
 
-      this.props.dispatch(addCard(JSON.stringify(result)));
       this.setState({ dialogOpen: false, ticker: '' });
     };
-
 
     handleClickOpen = () => {
       this.setState({ dialogOpen: true, ticker: '' });
@@ -103,10 +99,8 @@ class AddCard extends React.Component {
     }
 }
 
-
 AddCard.propTypes = {
   dispatch: PropTypes.func.isRequired,
 };
-
 
 export default connect()(AddCard);
