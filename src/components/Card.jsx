@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Card from '@material-ui/core/Card';
-import BarChartContainer from '../d3/BarChartContainer';
+import BarChart from '../d3/AreaChart';
 
 const StockCard = ({ text }) => (
   <Card
@@ -9,7 +9,7 @@ const StockCard = ({ text }) => (
             float: 'left', padding: 8, margin: 16, width: 600,
         }}
   >
-      <BarChartContainer />
+    <BarChart data={text} />
   </Card>
 );
 
