@@ -7,7 +7,8 @@ const cards = (state = [], action) => {
         ...state,
         {
           id: action.id,
-          text: action.text,
+          data: action.data,
+          ticker: action.ticker,
         },
       ];
     default:

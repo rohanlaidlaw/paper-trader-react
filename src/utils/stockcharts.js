@@ -17,8 +17,8 @@ function parseData(parse, stockTimeOfPurchase) {
 
 const parseDate = timeParse('%Y-%m-%d %H:%M:%S');
 
-export default function getData(key, symbol, stockTimeOfPurchase) {
-  const fetchStock = fetch(`https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${symbol}&interval=5min&outputsize=full&apikey=${key}&datatype=csv`)
+export default function getData(key, ticker, stockTimeOfPurchase) {
+  const fetchStock = fetch(`https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${ticker}&interval=5min&outputsize=full&apikey=${key}&datatype=csv`)
     .then(response => response.text())
     .then(data => csvParse(data, parseData(parseDate, stockTimeOfPurchase)));
   return fetchStock;
