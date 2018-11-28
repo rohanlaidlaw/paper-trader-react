@@ -1,14 +1,15 @@
 import { csvParse } from 'd3-dsv';
 import { timeParse } from 'd3-time-format';
 
-function parseData(parse) {
+function parseData(parse, stockTimeOfPurchase) {
   return function (d) {
     d.timestamp = parse(d.timestamp);
-    d.open = +d.open;
-    d.high = +d.high;
-    d.low = +d.low;
-    d.close = +d.close;
-    d.volume = +d.volume;
+    if (d.timestamp > stockTimeOfPurchase){
+        d.open = +d.open;
+        d.high = +d.high;
+        d.low = +d.low;
+        d.close = +d.close;
+    }
 
     return d;
   };
@@ -16,10 +17,10 @@ function parseData(parse) {
 
 const parseDate = timeParse('%Y-%m-%d %H:%M:%S');
 
-export default function getData(key, symbol) {
-  const fetchStock = fetch(`https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${symbol}&interval=5min&apikey=${key}&datatype=csv`)
+export default function getData(key, symbol, stockTimeOfPurchase) {
+  const fetchStock = fetch(`https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${symbol}&interval=5min&outputsize=full&apikey=${key}&datatype=csv`)
     .then(response => response.text())
-    .then(data => csvParse(data, parseData(parseDate)));
+    .then(data => csvParse(data, parseData(parseDate, stockTimeOfPurchase)));
   return fetchStock;
 }
 
