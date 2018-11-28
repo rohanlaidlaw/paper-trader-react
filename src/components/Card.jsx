@@ -11,14 +11,14 @@ const StockCard = ({ data, ticker }) => (
             float: 'left', padding: 8, margin: 16, width: 600,
         }}
   >
-      <CardContent>
+    <CardContent>
 
-          <Typography component="h1">
-              {ticker}
-          </Typography>
+      <Typography component="h1">
+        {ticker}
+      </Typography>
 
-          <BarChart data={data} />
-      </CardContent>
+      <BarChart data={data} />
+    </CardContent>
   </Card>
 );
 

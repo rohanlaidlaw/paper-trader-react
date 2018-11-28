@@ -4,11 +4,11 @@ import { timeParse } from 'd3-time-format';
 function parseData(parse, stockTimeOfPurchase) {
   return function (d) {
     d.timestamp = parse(d.timestamp);
-    if (d.timestamp > stockTimeOfPurchase){
-        d.open = +d.open;
-        d.high = +d.high;
-        d.low = +d.low;
-        d.close = +d.close;
+    if (d.timestamp > stockTimeOfPurchase) {
+      d.open = +d.open;
+      d.high = +d.high;
+      d.low = +d.low;
+      d.close = +d.close;
     }
 
     return d;
