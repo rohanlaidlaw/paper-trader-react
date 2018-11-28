@@ -26,8 +26,16 @@ class AddCard extends React.Component {
       ticker: '',
     };
 
+
     handleDone = async () => {
-      getData(key, this.state.ticker).then((data) => {
+      const stockTimeOfPurchase = new Date();
+      stockTimeOfPurchase.setHours(stockTimeOfPurchase.getHours() - 72);
+
+      console.log(stockTimeOfPurchase);
+
+
+      getData(key, this.state.ticker, stockTimeOfPurchase).then((data) => {
+        console.log(data);
         this.props.dispatch(addCard(data));
       });
 
