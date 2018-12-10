@@ -15,8 +15,6 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import { withStyles } from '@material-ui/core/styles';
-
-
 import addCard from '../actions/actions';
 import getData from '../utils/stockcharts';
 
@@ -75,13 +73,13 @@ class AddCard extends React.Component {
       const { classes } = this.props;
       return (
         <div className={classes.root}>
-          <AppBar position="static">
+          <AppBar position="static" style={{ backgroundColor: '#2196f3' }}>
             <Toolbar>
               <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
                 <MenuIcon />
               </IconButton>
               <Typography variant="h6" color="inherit" className={classes.grow}>
-                    News
+                    Paper Trader
               </Typography>
               <IconButton color="inherit" onClick={this.handleClickOpen}>
                 <Add />
