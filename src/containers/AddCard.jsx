@@ -14,18 +14,36 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import { withStyles } from '@material-ui/core/styles';
+
 
 import addCard from '../actions/actions';
 import getData from '../utils/stockcharts';
 
 const key = process.env.ALVA_API_KEY;
 
+const styles = {
+  root: {
+    flexGrow: 1,
+  },
+  grow: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginLeft: -12,
+    marginRight: 20,
+  },
+};
+
 class AddCard extends React.Component {
-    state = {
+  constructor(props) {
+    super(props);
+
+    this.state = {
       dialogOpen: false,
       ticker: '',
     };
-
+  }
 
     handleDone = async () => {
       const stockTimeOfPurchase = new Date();
@@ -54,17 +72,18 @@ class AddCard extends React.Component {
     };
 
     render() {
+      const { classes } = this.props;
       return (
-        <div>
+        <div className={classes.root}>
           <AppBar position="static">
             <Toolbar>
-              <IconButton>
+              <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
                 <MenuIcon />
               </IconButton>
-              <Typography variant="title" color="inherit">
-                    Paper Trader
+              <Typography variant="h6" color="inherit" className={classes.grow}>
+                    News
               </Typography>
-              <IconButton onClick={this.handleClickOpen}>
+              <IconButton color="inherit" onClick={this.handleClickOpen}>
                 <Add />
               </IconButton>
             </Toolbar>
@@ -108,4 +127,4 @@ AddCard.propTypes = {
   dispatch: PropTypes.func.isRequired,
 };
 
-export default connect()(AddCard);
+export default connect()(withStyles(styles)(AddCard));
