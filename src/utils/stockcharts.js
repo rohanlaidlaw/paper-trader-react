@@ -23,4 +23,3 @@ export default function getData(key, ticker, stockTimeOfPurchase) {
     .then(data => csvParse(data, parseData(parseDate, stockTimeOfPurchase)));
   return fetchStock;
 }
-

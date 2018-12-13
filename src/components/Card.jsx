@@ -3,22 +3,30 @@ import PropTypes from 'prop-types';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import BarChart from '../d3/AreaChart';
+import CardActionArea from "@material-ui/core/es/CardActionArea/CardActionArea";
+import CardMedia from "@material-ui/core/es/CardMedia/CardMedia";
+import AreaChart from '../d3/AreaChart';
 
 const StockCard = ({ data, ticker }) => (
   <Card
     style={{
-            float: 'left', padding: 8, margin: 16, width: 600,
+            position: 'relative', padding: 1, margin: 16, float: 'left', width: 1600,
         }}
   >
-    <CardContent>
+        <CardContent>
+            <Typography>
+                <Typography variant="h5" component="h1" style={{ position: 'absolute', bottom: '30px', left: '60px' }}>
+                    {ticker}
+                </Typography>
 
-      <Typography component="h1">
-        {ticker}
-      </Typography>
-
-      <BarChart data={data} />
-    </CardContent>
+                <Typography component="p" style={{ position: 'absolute', bottom: '50px', right: '50px' }}>
+                    ${data[0].close}
+                </Typography>
+            </Typography>
+        </CardContent>
+        <CardMedia>
+            <AreaChart data={data}/>
+        </CardMedia>
   </Card>
 );
 

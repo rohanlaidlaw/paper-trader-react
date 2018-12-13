@@ -49,6 +49,7 @@ class AddCard extends React.Component {
       stockTimeOfPurchase.setHours(stockTimeOfPurchase.getHours() - 72);
 
       getData(key, ticker, stockTimeOfPurchase).then((data) => {
+        console.log(data);
         this.props.dispatch(addCard(data, ticker));
       });
 
