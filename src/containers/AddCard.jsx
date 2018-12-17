@@ -45,12 +45,18 @@ class AddCard extends React.Component {
 
     handleDone = async () => {
       const stockTimeOfPurchase = new Date();
-      const ticker = this.state.ticker;
+      const { ticker } = this.state;
+      const { dispatch } = this.props;
+
       stockTimeOfPurchase.setHours(stockTimeOfPurchase.getHours() - 72);
 
       getData(key, ticker, stockTimeOfPurchase).then((data) => {
-        const percentChange = parseInt(((parseFloat(data[data.length - 1].close) - parseFloat(data[0].close)) / parseFloat(data[0].close)) * 100);
-        this.props.dispatch(addCard(data, ticker, percentChange));
+        const oldFigure = parseFloat(data[0].close);
+        const newFigure = parseFloat(data[data.length - 1].close);
+        const diff = newFigure - oldFigure;
+        const percentChange = parseInt(((diff / oldFigure) * 100), 10);
+
+        dispatch(addCard(data, ticker, percentChange));
       });
 
       this.setState({ dialogOpen: false, ticker: '' });
@@ -72,6 +78,8 @@ class AddCard extends React.Component {
 
     render() {
       const { classes } = this.props;
+      const { dialogOpen } = this.state;
+      const { ticker } = this.state;
       return (
         <div className={classes.root}>
           <AppBar position="static" style={{ backgroundColor: '#2196f3' }}>
@@ -88,7 +96,7 @@ class AddCard extends React.Component {
             </Toolbar>
           </AppBar>
           <Dialog
-            open={this.state.dialogOpen}
+            open={dialogOpen}
             onClose={this.handleClose}
             aria-labelledby="form-dialog-title"
           >
@@ -104,7 +112,7 @@ class AddCard extends React.Component {
                 label="Stock Ticker"
                 type="text"
                 fullWidth
-                value={this.state.ticker}
+                value={ticker}
                 onChange={this.handleInput}
               />
             </DialogContent>
@@ -124,6 +132,7 @@ class AddCard extends React.Component {
 
 AddCard.propTypes = {
   dispatch: PropTypes.func.isRequired,
+  classes: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
 };
 
 export default connect()(withStyles(styles)(AddCard));

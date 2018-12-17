@@ -3,15 +3,16 @@ import { timeParse } from 'd3-time-format';
 
 function parseData(parse, stockTimeOfPurchase) {
   return function dParse(d) {
-    d.timestamp = parse(d.timestamp);
-    if (d.timestamp > stockTimeOfPurchase) {
-      d.open = +d.open;
-      d.high = +d.high;
-      d.low = +d.low;
-      d.close = +d.close;
+    const parsedData = d;
+    parsedData.timestamp = parse(d.timestamp);
+    if (parsedData.timestamp > stockTimeOfPurchase) {
+      parsedData.open = +d.open;
+      parsedData.high = +d.high;
+      parsedData.low = +d.low;
+      parsedData.close = +d.close;
     }
 
-    return d;
+    return parsedData;
   };
 }
 
