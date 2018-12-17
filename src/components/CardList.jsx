@@ -6,11 +6,12 @@ import StockCard from './Card';
 
 const CardList = ({ cards }) => (
   <ul>
-    {cards.map(card =>
-      (<StockCard
+    {cards.map(card => (
+      <StockCard
         key={card.id}
         {...card}
-      />))}
+      />
+    ))}
   </ul>
 );
 
