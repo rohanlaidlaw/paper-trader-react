@@ -9,6 +9,7 @@ const cards = (state = [], action) => {
           id: action.id,
           data: action.data,
           ticker: action.ticker,
+          perchange: action.perchange,
         },
       ];
     default:

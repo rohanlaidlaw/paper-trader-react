@@ -7,7 +7,7 @@ import CardActionArea from "@material-ui/core/es/CardActionArea/CardActionArea";
 import CardMedia from "@material-ui/core/es/CardMedia/CardMedia";
 import AreaChart from '../d3/AreaChart';
 
-const StockCard = ({ data, ticker }) => (
+const StockCard = ({ data, ticker, perchange }) => (
   <Card
     style={{
             position: 'relative', padding: 1, margin: 16, float: 'left', width: 1600,
@@ -20,7 +20,7 @@ const StockCard = ({ data, ticker }) => (
                 </Typography>
 
                 <Typography component="p" style={{ position: 'absolute', bottom: '50px', right: '50px' }}>
-                    ${data[0].close}
+                    {perchange}%
                 </Typography>
             </Typography>
         </CardContent>
@@ -33,7 +33,7 @@ const StockCard = ({ data, ticker }) => (
 StockCard.propTypes = {
   data: PropTypes.string.isRequired,
   ticker: PropTypes.string.isRequired,
-
+  perchange: PropTypes.number.isRequired,
 };
 
 export default StockCard;
