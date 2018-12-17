@@ -7,7 +7,7 @@ import CardActionArea from '@material-ui/core/es/CardActionArea/CardActionArea';
 import CardMedia from '@material-ui/core/es/CardMedia/CardMedia';
 import AreaChart from '../d3/AreaChart';
 
-const StockCard = ({ data, ticker, perchange }) => (
+const StockCard = ({ data, ticker, percentChange }) => (
   <Card
     style={{
       position: 'relative', padding: 1, margin: 16, float: 'left', width: 1600,
@@ -20,7 +20,7 @@ const StockCard = ({ data, ticker, perchange }) => (
         </Typography>
 
         <Typography variant="h5" component="h1" style={{ position: 'absolute', bottom: '50px', right: '50px' }}>
-          {perchange}
+          {percentChange}
 %
         </Typography>
       </Typography>
@@ -34,7 +34,7 @@ const StockCard = ({ data, ticker, perchange }) => (
 StockCard.propTypes = {
   data: PropTypes.string.isRequired,
   ticker: PropTypes.string.isRequired,
-  perchange: PropTypes.number.isRequired,
+  percentChange: PropTypes.number.isRequired,
 };
 
 export default StockCard;

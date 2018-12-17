@@ -16,7 +16,7 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import { withStyles } from '@material-ui/core/styles';
 import addCard from '../actions/actions';
-import getData from '../utils/stockcharts';
+import getData from '../utils/stockDataUtils';
 
 const key = process.env.ALVA_API_KEY;
 
@@ -49,8 +49,8 @@ class AddCard extends React.Component {
       stockTimeOfPurchase.setHours(stockTimeOfPurchase.getHours() - 72);
 
       getData(key, ticker, stockTimeOfPurchase).then((data) => {
-        const perchange = parseInt(((parseFloat(data[data.length - 1].close) - parseFloat(data[0].close)) / parseFloat(data[0].close)) * 100);
-        this.props.dispatch(addCard(data, ticker, perchange));
+        const percentChange = parseInt(((parseFloat(data[data.length - 1].close) - parseFloat(data[0].close)) / parseFloat(data[0].close)) * 100);
+        this.props.dispatch(addCard(data, ticker, percentChange));
       });
 
       this.setState({ dialogOpen: false, ticker: '' });
