@@ -5,3 +5,5 @@ rules:
 globals:
     Stocks: true
 parser: babel-eslint
+env:
+    browser: true

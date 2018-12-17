@@ -2,7 +2,7 @@ import { csvParse } from 'd3-dsv';
 import { timeParse } from 'd3-time-format';
 
 function parseData(parse, stockTimeOfPurchase) {
-  return function (d) {
+  return function dParse(d) {
     d.timestamp = parse(d.timestamp);
     if (d.timestamp > stockTimeOfPurchase) {
       d.open = +d.open;
