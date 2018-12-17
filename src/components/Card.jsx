@@ -19,7 +19,7 @@ const StockCard = ({ data, ticker, perchange }) => (
                     {ticker}
                 </Typography>
 
-                <Typography component="p" style={{ position: 'absolute', bottom: '50px', right: '50px' }}>
+                <Typography variant="h5" component="h1" style={{ position: 'absolute', bottom: '50px', right: '50px' }}>
                     {perchange}%
                 </Typography>
             </Typography>
