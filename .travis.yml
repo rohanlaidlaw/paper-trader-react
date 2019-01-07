@@ -1,20 +1,23 @@
 language: node_js
 
 node_js:
-  - v10.14.1
+  - '8'
 
 sudo: enabled
-
-install:
-  - npm install
 
 notifications:
   email: false
 
-script: echo "Running tests against $(node -v)..."
+before_install:
+  - npm update
 
-jobs:
-  include:
-    - stage: Produce Coverage
-      node_js: node
-      script:  NODE_ENV=test npm test --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
+install:
+  - npm install
+
+script:
+  - npm test
+  - npm run coveralls
+
+cache:
+  directories:
+    - node_modules

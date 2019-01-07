@@ -30,7 +30,8 @@
     "compile": "webpack",
     "start": "node server.js",
     "pretest": "eslint --ext .jsx --ext .js --ignore-path .gitignore .",
-    "test": "jest"
+    "test": "jest",
+    "coveralls": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
