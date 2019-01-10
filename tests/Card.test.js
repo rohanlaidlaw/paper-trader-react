@@ -5,7 +5,7 @@ import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import configureStore from 'redux-mock-store';
 
-// Component to be tested
+// Component to be tested.
 import StockCard from '../src/components/Card';
 
 describe('<StockCard />', () => {
