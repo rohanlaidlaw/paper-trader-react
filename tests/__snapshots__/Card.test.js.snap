@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StockCard /> render() renders the component 1`] = `
+<Card
+  classes={
+    Object {
+      "root": "MuiCard-root-1",
+    }
+  }
+  raised={false}
+  style={
+    Object {
+      "float": "left",
+      "margin": 16,
+      "padding": 1,
+      "position": "relative",
+      "width": 1600,
+    }
+  }
+>
+  <WithStyles(CardContent)>
+    <WithStyles(Typography)>
+      <WithStyles(Typography)
+        component="h1"
+        style={
+          Object {
+            "bottom": "30px",
+            "left": "60px",
+            "position": "absolute",
+          }
+        }
+        variant="h5"
+      />
+      <WithStyles(Typography)
+        component="h1"
+        style={
+          Object {
+            "bottom": "50px",
+            "position": "absolute",
+            "right": "50px",
+          }
+        }
+        variant="h5"
+      >
+        %
+      </WithStyles(Typography)>
+    </WithStyles(Typography)>
+  </WithStyles(CardContent)>
+  <WithStyles(CardMedia)>
+    <fitWidth(AreaChart) />
+  </WithStyles(CardMedia)>
+</Card>
+`;
