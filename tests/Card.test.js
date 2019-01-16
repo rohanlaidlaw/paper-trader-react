@@ -25,6 +25,12 @@ describe('StockCard', () => {
         expect(wrapper.contains('acme')).toBe(true);
     });
 
+    it('displays the percent change',() => {
+        const wrapper = shallow(<StockCard {...acmeProps} />);
+
+        expect(wrapper.contains(5)).toBe(true);
+    });
+
 });
 
 
