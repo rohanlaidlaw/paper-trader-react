@@ -19,6 +19,12 @@ describe('StockCard', () => {
         expect(wrapper.exists()).toBe(true);
     });
 
+    it('matches snapshot',() => {
+        const wrapper = shallow(<StockCard {...acmeProps} />);
+
+        expect(wrapper).toMatchSnapshot();
+    });
+
     it('displays the ticker',() => {
         const wrapper = shallow(<StockCard {...acmeProps} />);
 
