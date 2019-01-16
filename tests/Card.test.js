@@ -13,6 +13,12 @@ describe('StockCard', () => {
         percentChange: 5,
     };
 
+    it('renders',() => {
+        const wrapper = shallow(<StockCard {...acmeProps} />);
+
+        expect(wrapper.exists()).toBe(true);
+    });
+
     it('displays the ticker',() => {
         const wrapper = shallow(<StockCard {...acmeProps} />);
 
