@@ -1,9 +1,9 @@
 /* eslint-disable */
-import addCard from '../src/actions/actions.js'
+import addCard from '../src/actions/addCard'
 
 describe('actions', () => {
 
-    it('should create an action to add a card', () => {
+    it('creates add card action', () => {
         let nextCardId = 0;
         const data = '1, 2, 3';
         const ticker = 'acme';

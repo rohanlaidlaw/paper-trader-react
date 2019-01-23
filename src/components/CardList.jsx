@@ -18,10 +18,8 @@ const CardList = ({ cards }) => (
 CardList.propTypes = {
   cards: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
-    text: PropTypes.string.isRequired,
   }).isRequired).isRequired,
 };
-
 
 const getCards = cards => cards;
 

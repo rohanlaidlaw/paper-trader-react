@@ -6,7 +6,7 @@ const Dotenv = require('dotenv-webpack');
 module.exports = {
   context: path.join(__dirname, './src'),
   entry: [
-    'babel-polyfill', './main.jsx',
+    '@babel/polyfill', './main.jsx',
   ],
   output: {
     path: path.join(__dirname, './www'),

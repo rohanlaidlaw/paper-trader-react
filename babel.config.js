@@ -1,11 +1,25 @@
 /* eslint-disable */
 
 module.exports = {
-  presets: [
-    '@babel/env',
-    '@babel/react',
-  ],
-  plugins: [
-    '@babel/plugin-proposal-class-properties',
-  ],
+    env: {
+        development: {
+            presets: [
+                '@babel/env',
+                '@babel/react',
+            ],
+            plugins: [
+                '@babel/plugin-proposal-class-properties',
+                '@babel/plugin-transform-runtime',
+            ],
+        },
+        test: {
+            presets: [
+                '@babel/env',
+                '@babel/react',
+            ],
+            plugins: [
+                '@babel/plugin-proposal-class-properties',
+            ],
+        }
+    }
 };

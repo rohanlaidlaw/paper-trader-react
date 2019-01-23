@@ -1,5 +1,5 @@
 /* eslint-disable */
-import reducer from '../src/reducers/reducers.js';
+import reducer from '../src/reducers/reducers';
 
 describe('reducer', () => {
 
