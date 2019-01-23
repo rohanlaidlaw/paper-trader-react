@@ -24,7 +24,7 @@ function calculatePercentChange(oldFigure, newFigure) {
   return parseInt(((diff / oldFigure) * 100), 10);
 }
 
-function getData(key, ticker, stockTimeOfPurchase) {
+export function getData(key, ticker, stockTimeOfPurchase) {
   const url = `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${ticker}&interval=5min&outputsize=full&apikey=${key}&datatype=csv`;
   return dispatch => fetch(url, {
     method: 'GET',
@@ -33,8 +33,6 @@ function getData(key, ticker, stockTimeOfPurchase) {
     .then(
       (data) => {
         const parsedData = csvParse(data, parseData(parseDate, stockTimeOfPurchase));
-        console.log(stockTimeOfPurchase);
-
 
         const oldFigure = parseFloat(parsedData[0].close);
         const newFigure = parseFloat(parsedData[parsedData.length - 1].close);
