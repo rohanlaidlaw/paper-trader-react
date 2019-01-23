@@ -1,10 +1,19 @@
 /* eslint-disable */
-import configureMockStore from 'redux-mock-store'
-import thunk from 'redux-thunk'
+import configureStore from 'redux-mock-store';
+
 import addCard from '../src/actions/addCard'
 
+const mockStore = configureStore();
+const store = mockStore();
+
+
 describe('actions', () => {
+    beforeEach(() => {
+            store.clearActions();
+        });
+
     it('creates add card action', () => {
+
         let nextCardId = 0;
         const data = '1, 2, 3';
         const ticker = 'acme';
@@ -21,18 +30,16 @@ describe('actions', () => {
     });
 
     it('dispatches addCard', () => {
-        const dispatch = jest.fn();
         let nextCardId = 0;
         const data = '1, 2, 3';
         const ticker = 'acme';
         const percentChange = 5;
 
+        store.dispatch(addCard(data, ticker, percentChange));
 
-        dispatch(addCard(data, ticker, percentChange));
+        expect(store.getActions().length).toBe(1);
 
-        expect(dispatch.mock.calls.length).toBe(1);
-
-        expect(dispatch.mock.calls[0]).toContainEqual({
+        expect(store.getActions()).toContainEqual({
             type: 'ADD_CARD',
             id: nextCardId+2,
             data,
