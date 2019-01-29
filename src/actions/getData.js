@@ -19,7 +19,7 @@ function parseData(parse, stockTimeOfPurchase) {
   };
 }
 
-function calculatePercentChange(oldFigure, newFigure) {
+export function calculatePercentChange(oldFigure, newFigure) {
   const diff = newFigure - oldFigure;
   return parseInt(((diff / oldFigure) * 100), 10);
 }
