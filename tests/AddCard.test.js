@@ -1,12 +1,11 @@
 /* eslint-disable */
 
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, render } from 'enzyme';
 import configureStore from 'redux-mock-store';
 
 
 import AddCard from '../src/containers/AddCard';
-import StockCard from "../src/components/Card";
 
 const mockStore = configureStore();
 const store = mockStore();
@@ -23,8 +22,9 @@ describe('AddCard', () => {
   });
 
   it('matches snapshot', () => {
-    const wrapper = shallow(<AddCard store={store} />);
+    const wrapper = render(<AddCard store={store} />);
 
     expect(wrapper).toMatchSnapshot();
   });
+
 });
