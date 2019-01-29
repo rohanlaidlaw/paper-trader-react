@@ -1,0 +1,437 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StockCard matches snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <StockCard
+    data="1, 2, 3"
+    percentChange={5}
+    ticker="acme"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <WithStyles(CardContent)>
+          <WithStyles(Typography)>
+            <WithStyles(Typography)
+              component="h1"
+              style={
+                Object {
+                  "bottom": "30px",
+                  "left": "60px",
+                  "position": "absolute",
+                }
+              }
+              variant="h5"
+            >
+              acme
+            </WithStyles(Typography)>
+            <WithStyles(Typography)
+              component="h2"
+              style={
+                Object {
+                  "bottom": "50px",
+                  "position": "absolute",
+                  "right": "50px",
+                }
+              }
+              variant="h5"
+            >
+              5
+              %
+            </WithStyles(Typography)>
+          </WithStyles(Typography)>
+        </WithStyles(CardContent)>,
+        <WithStyles(CardMedia)>
+          <fitWidth(AreaChart)
+            data="1, 2, 3"
+          />
+        </WithStyles(CardMedia)>,
+      ],
+      "style": Object {
+        "float": "left",
+        "margin": 16,
+        "padding": 1,
+        "position": "relative",
+        "width": 1600,
+      },
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <WithStyles(Typography)>
+            <WithStyles(Typography)
+              component="h1"
+              style={
+                Object {
+                  "bottom": "30px",
+                  "left": "60px",
+                  "position": "absolute",
+                }
+              }
+              variant="h5"
+            >
+              acme
+            </WithStyles(Typography)>
+            <WithStyles(Typography)
+              component="h2"
+              style={
+                Object {
+                  "bottom": "50px",
+                  "position": "absolute",
+                  "right": "50px",
+                }
+              }
+              variant="h5"
+            >
+              5
+              %
+            </WithStyles(Typography)>
+          </WithStyles(Typography)>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <WithStyles(Typography)
+                component="h1"
+                style={
+                  Object {
+                    "bottom": "30px",
+                    "left": "60px",
+                    "position": "absolute",
+                  }
+                }
+                variant="h5"
+              >
+                acme
+              </WithStyles(Typography)>,
+              <WithStyles(Typography)
+                component="h2"
+                style={
+                  Object {
+                    "bottom": "50px",
+                    "position": "absolute",
+                    "right": "50px",
+                  }
+                }
+                variant="h5"
+              >
+                5
+                %
+              </WithStyles(Typography)>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "acme",
+                "component": "h1",
+                "style": Object {
+                  "bottom": "30px",
+                  "left": "60px",
+                  "position": "absolute",
+                },
+                "variant": "h5",
+              },
+              "ref": null,
+              "rendered": "acme",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  5,
+                  "%",
+                ],
+                "component": "h2",
+                "style": Object {
+                  "bottom": "50px",
+                  "position": "absolute",
+                  "right": "50px",
+                },
+                "variant": "h5",
+              },
+              "ref": null,
+              "rendered": Array [
+                5,
+                "%",
+              ],
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <fitWidth(AreaChart)
+            data="1, 2, 3"
+          />,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "data": "1, 2, 3",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <WithStyles(CardContent)>
+            <WithStyles(Typography)>
+              <WithStyles(Typography)
+                component="h1"
+                style={
+                  Object {
+                    "bottom": "30px",
+                    "left": "60px",
+                    "position": "absolute",
+                  }
+                }
+                variant="h5"
+              >
+                acme
+              </WithStyles(Typography)>
+              <WithStyles(Typography)
+                component="h2"
+                style={
+                  Object {
+                    "bottom": "50px",
+                    "position": "absolute",
+                    "right": "50px",
+                  }
+                }
+                variant="h5"
+              >
+                5
+                %
+              </WithStyles(Typography)>
+            </WithStyles(Typography)>
+          </WithStyles(CardContent)>,
+          <WithStyles(CardMedia)>
+            <fitWidth(AreaChart)
+              data="1, 2, 3"
+            />
+          </WithStyles(CardMedia)>,
+        ],
+        "style": Object {
+          "float": "left",
+          "margin": 16,
+          "padding": 1,
+          "position": "relative",
+          "width": 1600,
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <WithStyles(Typography)>
+              <WithStyles(Typography)
+                component="h1"
+                style={
+                  Object {
+                    "bottom": "30px",
+                    "left": "60px",
+                    "position": "absolute",
+                  }
+                }
+                variant="h5"
+              >
+                acme
+              </WithStyles(Typography)>
+              <WithStyles(Typography)
+                component="h2"
+                style={
+                  Object {
+                    "bottom": "50px",
+                    "position": "absolute",
+                    "right": "50px",
+                  }
+                }
+                variant="h5"
+              >
+                5
+                %
+              </WithStyles(Typography)>
+            </WithStyles(Typography)>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <WithStyles(Typography)
+                  component="h1"
+                  style={
+                    Object {
+                      "bottom": "30px",
+                      "left": "60px",
+                      "position": "absolute",
+                    }
+                  }
+                  variant="h5"
+                >
+                  acme
+                </WithStyles(Typography)>,
+                <WithStyles(Typography)
+                  component="h2"
+                  style={
+                    Object {
+                      "bottom": "50px",
+                      "position": "absolute",
+                      "right": "50px",
+                    }
+                  }
+                  variant="h5"
+                >
+                  5
+                  %
+                </WithStyles(Typography)>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "acme",
+                  "component": "h1",
+                  "style": Object {
+                    "bottom": "30px",
+                    "left": "60px",
+                    "position": "absolute",
+                  },
+                  "variant": "h5",
+                },
+                "ref": null,
+                "rendered": "acme",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    5,
+                    "%",
+                  ],
+                  "component": "h2",
+                  "style": Object {
+                    "bottom": "50px",
+                    "position": "absolute",
+                    "right": "50px",
+                  },
+                  "variant": "h5",
+                },
+                "ref": null,
+                "rendered": Array [
+                  5,
+                  "%",
+                ],
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <fitWidth(AreaChart)
+              data="1, 2, 3"
+            />,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "data": "1, 2, 3",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

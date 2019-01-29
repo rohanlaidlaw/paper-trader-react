@@ -27,4 +27,12 @@ describe('AddCard', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('renders correct UI', () => {
+    const wrapper = render(<AddCard store={store} />);
+
+    expect(wrapper.text()).toContain('Paper Trader');
+  });
+
+
+
 });
