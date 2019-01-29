@@ -22,6 +22,11 @@ describe('actions', () => {
     expect(percent).toEqual(100);
   });
 
+  it('calculates percent no change correctly', () => {
+    const percent = calculatePercentChange(100, 100);
+    expect(percent).toEqual(0);
+  });
+
   it('creates add card action', () => {
     const nextCardId = 0;
     const data = '1, 2, 3';
