@@ -34,10 +34,13 @@ npm start
 
 Test
 ---
-Paper Trader uses Jest for running unit tests. Continuous integration is handled by Travis CI.
+Paper Trader uses a test stack comprised of Jest, Enzyme and Cypress, covering unit, integration and E2E testing. Continuous integration is handled through Travis CI.
 
 ```
 npm test
+```
+```
+npm run cypress
 ```
 
 Workflow
