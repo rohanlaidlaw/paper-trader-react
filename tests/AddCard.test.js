@@ -8,6 +8,7 @@ import configureStore from 'redux-mock-store';
 import AddCard from '../src/containers/AddCard';
 import Add from '@material-ui/icons/Add';
 import MenuIcon from '@material-ui/icons/Menu';
+import Dialog from '@material-ui/core/Dialog';
 
 const mockStore = configureStore();
 const store = mockStore();
@@ -38,7 +39,11 @@ describe('AddCard', () => {
 
   });
 
-  //Todo Click event triggers dialog box
-  //Todo Dialog box closes when text entered, text is correct
+  it('does not load dialog box before click', () => {
+    const wrapper = mount(<AddCard store={store}/>);
 
+    const dialog = wrapper.find(Dialog);
+
+    expect(dialog.props().open).toEqual(false);
+  });
 });
