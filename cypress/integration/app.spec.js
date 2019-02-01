@@ -8,4 +8,8 @@ describe('Main Page', () => {
     it('shows correct app bar title', () => {
         cy.get('div').contains('Paper Trader')
     });
+
+    it('shows buttons in app bar', () => {
+        cy.get('button').should('have.length', 2)
+    });
 });
