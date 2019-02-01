@@ -87,7 +87,8 @@
     },
     "testPathIgnorePatterns": [
       "<rootDir>/node_modules/",
-      "<rootDir>/tests/setup/"
+      "<rootDir>/tests/setup/",
+      "<rootDir>/cypress"
     ],
     "transform": {
       "^.+\\.jsx$": "babel-jest",
