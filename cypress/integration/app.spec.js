@@ -25,9 +25,13 @@ describe('Dialog Box', () => {
         cy.get('.jss100 > .jss13');
     });
 
-    it('is spawned correctly', () => {
+    it('has correct buttons', () => {
         cy.get('.jss177 > :nth-child(1)');
         cy.get('.jss177 > :nth-child(2)');
     });
 
+    it('cancel button works', () => {
+        cy.get('.jss177 > :nth-child(1)').click();
+        cy.get('.jss100 > .jss13').should('not.exist');
+    });
 });
