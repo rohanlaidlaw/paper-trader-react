@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 
 import StockCard from './Card';
 
+/*
+ * An array containing the stock card objects, which are passed in as props.
+ */
 const CardList = ({ cards }) => (
   <ul>
     {cards.map(card => (
