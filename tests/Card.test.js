@@ -36,5 +36,4 @@ describe('StockCard', () => {
     expect(wrapper.contains(5)).toBe(true);
   });
 
-  // TODO: test the d3 graph/data
 });
