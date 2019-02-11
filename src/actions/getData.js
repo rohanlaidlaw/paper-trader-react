@@ -4,6 +4,9 @@ import addCard from './addCard';
 
 const parseDate = timeParse('%Y-%m-%d %H:%M:%S');
 
+/*
+ * Only relevant data within the time frame of the timestamp (three days prior) are kept.
+ */
 function parseData(parse, stockTimeOfPurchase) {
   return function dParse(d) {
     const parsedData = d;
@@ -19,11 +22,19 @@ function parseData(parse, stockTimeOfPurchase) {
   };
 }
 
+/*
+ * Performs percent change arithmetic, taking the earliest and latest figures to determine
+ * performance.
+ */
 export function calculatePercentChange(oldFigure, newFigure) {
   const diff = newFigure - oldFigure;
   return parseInt(((diff / oldFigure) * 100), 10);
 }
 
+/*
+ * Performs an API call to Alpha Vantage using the key, ticker and timestamp from Add Card,
+ * via the Redux store. The data returned from the API is parsed and then dispatched to addCard.
+ */
 export function getData(key, ticker, stockTimeOfPurchase) {
   const url = `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${ticker}&interval=5min&outputsize=full&apikey=${key}&datatype=csv`;
   return dispatch => fetch(url, {
