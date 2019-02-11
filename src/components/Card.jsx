@@ -6,6 +6,10 @@ import Typography from '@material-ui/core/Typography';
 import CardMedia from '@material-ui/core/es/CardMedia/CardMedia';
 import AreaChart from '../d3/AreaChart';
 
+
+/*
+ * A component that renders stock performance as a d3.js area chart inside a Material UI card.
+ */
 const StockCard = ({ data, ticker, percentChange }) => (
   <Card
     style={{
