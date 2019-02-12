@@ -1,6 +1,6 @@
 {
   "name": "paper-trader-react",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "dependencies": {
     "@babel/plugin-transform-regenerator": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.2.0",
