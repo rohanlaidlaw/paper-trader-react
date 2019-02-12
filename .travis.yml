@@ -16,7 +16,7 @@ install:
 
 script:
   - jest --clearCache --updateSnapshot --update
-  - npm test
+  - npm test -- -u
   - npm run coveralls
 
 cache:
