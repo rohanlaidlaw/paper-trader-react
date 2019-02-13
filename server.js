@@ -1,4 +1,6 @@
 const express = require('express');
+const expressGraphQL = require('express-graphql');
+const { buildSchema } = require('graphql');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpack = require('webpack');
 const path = require('path');
@@ -7,7 +9,23 @@ const webpackConfig = require('./webpack.config.js');
 const app = express();
 const compiler = webpack(webpackConfig);
 
+const schema = buildSchema(`
+  type Query {
+      message: String
+  }
+`);
+
+const root = {
+  message: () => 'Hello World!',
+};
+
 app.use(express.static(path.join(__dirname, '/www')));
+
+app.use('/graphql', expressGraphQL({
+  schema,
+  rootValue: root,
+  graphiql: true,
+}));
 
 app.use(webpackDevMiddleware(compiler, {
   hot: true,
