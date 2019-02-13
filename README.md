@@ -43,6 +43,14 @@ npm test
 npm run cypress
 ```
 
+Backend
+---
+Paper Trader uses the GraphQL API query language. 
+```
+/graphql
+```
+
+
 Workflow
 ---
 Paper Trader uses the Gitflow workflow.
